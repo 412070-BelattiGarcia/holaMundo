@@ -1,0 +1,23 @@
+<table class="w-full bg-gray-100 rounded overflow-hidden">
+  <thead class="bg-indigo-600 text-gray-50">
+    <tr>
+      <th class="text-start">Título</th>
+      <th class="text-end">Cantidad de Preguntas</th>
+      <th class="text-end">Cantidad de Respuestas</th>
+      <th class="text-center">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (encuesta of encuestas; track $index){
+      <tr>
+        <td class="text-start"> {{encuesta.titulo}} </td>
+        <td class="text-end"> {{encuesta.cantidadPreguntas}} </td>
+        <td class="text-end"> {{encuesta.cantidadRespuestas}} </td>
+        <td class="flex gap-2 p-1">
+          <button class="bg-green-700 py-1 px-2 text-gray-50 hover:bg-green-600">Responder</button>
+          <button class="bg-blue-700 py-1 px-2 text-gray-50 hover:bg-blue-600">Estadisticas</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
